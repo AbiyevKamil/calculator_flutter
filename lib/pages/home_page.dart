@@ -11,7 +11,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final Color txtColor = Colors.black.withOpacity(0.8);
   bool isDark = false;
   String expression = "";
   String history = "";
@@ -53,14 +52,14 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: isDark ? txtColor : Colors.white,
+      backgroundColor: isDark ? Colors.black.withOpacity(0.8) : Colors.white,
       appBar: AppBar(
-        backgroundColor: isDark ? txtColor : Colors.white,
+        backgroundColor: isDark ? Colors.black.withOpacity(0.8) : Colors.white,
         title: Text(
           "Calculator",
           style: TextStyle(
             fontSize: 34,
-            color: isDark ? Colors.white : txtColor,
+            color: isDark ? Colors.white : Colors.black.withOpacity(0.8),
           ),
         ),
         actions: [
@@ -99,7 +98,7 @@ class _HomePageState extends State<HomePage> {
             child: Text(
               expression,
               style: TextStyle(
-                color: isDark ? Colors.white : txtColor,
+                color: isDark ? Colors.white : Colors.black.withOpacity(0.8),
                 fontSize: 24,
                 fontWeight: FontWeight.w500,
               ),
